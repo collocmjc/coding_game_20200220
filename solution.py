@@ -8,7 +8,7 @@ def check_function(f, max_iter=10000000000):
     """ check if f return the good result for n in range(max_iter)"""
     for n in range(max_iter):
         res = f(n)
-        if not check_result:
+        if not check_result(n,res):
             print('Error with {} : {}'.format(n, res))
 
 def get_solution(n):
